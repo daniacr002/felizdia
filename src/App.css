@@ -112,7 +112,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1.5rem;
+  margin-top: 3.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.5rem;
@@ -132,23 +132,24 @@
   width: 350px;
 }
 .loader{
-  width: 60px;
+  width: 100px;
   aspect-ratio: 2;
-  --_g: no-repeat radial-gradient(circle closest-side,#d7c7c7 90%,#0000);
+  --_g: no-repeat radial-gradient(circle closest-side,#dc0db3 90%,#0000);
   background: 
     var(--_g) 0%   50%,
     var(--_g) 50%  50%,
     var(--_g) 100% 50%;
   background-size: calc(100%/3) 50%;
   animation: l3 1s infinite linear;
+  position: absolute;
 }
 
 .foto{
-  width: 120px;
-  height: 120px;
+  width: 55px;
+  height: 70px;
   position: absolute;
-  top: 240px;
-  right: 190px;
+  top: 60px;
+  right: 80px;
   border: none;
 }
 @media (width >=425px) {
@@ -186,6 +187,14 @@
   }
 }
 @media (width >=768px) {
+  .foto{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 240px;
+    right: 190px;
+    border: none;
+  }
   .cookieleft {
     top: 39%;
     left: 40%; 

@@ -129,7 +129,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 100px
+  width: 350px;
+}
+.loader{
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#d7c7c7 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+
+.foto{
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 240px;
+  right: 190px;
+  border: none;
 }
 @media (width >=425px) {
   .cookieleft {

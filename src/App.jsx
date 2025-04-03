@@ -16,6 +16,16 @@ function App() {
   const [phraseRandom, setPhraseRandom] = useState(quote);
   const [bgApp, setBgApp] = useState(getRandomFromArr(bgArr));
   const [image, setImage] = useState(getRandomFromArr(images));
+  const [loader, setLoader] = useState(false) // Agregamos el estado del loader
+
+  useEffect(() => {
+    setLoader(true);
+    const timer = setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+    
+    return () => clearTimeout(timer); // Limpia el temporizador al desmontar
+  }, [phraseRandom]); 
 
   // Refs para las animaciones
   const textRef = useRef(null);
@@ -86,9 +96,13 @@ function App() {
       <div ref={cookieRightRef} className="cookieright">
         <img src={cookieright} alt="cookie right animation" />
       </div>
+      {loader ? ( // Si loader es true, se muestra el spinner
+          <div className="loader"></div>) :
+        (
       <div className="galleta_container" ref={textRef}>
         <Phrase phraseRandom={phraseRandom} />
       </div>
+      )}
       <ButtonPhrase handlePhrase={handleChangePhrase} />
     </>
   );

@@ -7,9 +7,12 @@ const Phrase = ({ phraseRandom }) => {
       <article className='article'>
         <div className="galleta_text">
         
-          <p><strong>✨ ¡Feliz Día sarita! ✨</strong></p>
+          <p><strong>✨ ¡Para la niña mas bonita! ✨</strong></p>
+          <p><strong>✨ ¡Estefania! ✨</strong></p>
           <p>¡Sigue brillando y muchos exitos! 💜</p>
+        <img className="foto" src="https://i.imgur.com/lydZIsC.jpeg" alt="" />
         </div>
+
       </article>
     
 

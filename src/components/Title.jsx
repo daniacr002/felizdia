@@ -1,7 +1,7 @@
 function Title() {
     return (
         <div className='galleta_title'>
-            <h1>Feliz dia de la mujer</h1>
+            <h1>Eres la mejor</h1>
         </div>
     )
 }
